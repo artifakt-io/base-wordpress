@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Akismet Spam Protection - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-23 09:02:29+0000\n"
+"PO-Revision-Date: 2020-12-07 22:42:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,7 +76,7 @@ msgstr "Clé API nécessaire pour la récupération de statistiques."
 
 #: views/config.php:162
 msgid "To help your site with transparency under privacy laws like the GDPR, Akismet can display a notice to your users under your comment forms. This feature is disabled by default, however, you can turn it on above."
-msgstr "Pour aider votre site à être plus transparent à l’égard des lois sur la confidentialité comme la RGPD, Akismet permet d’afficher un message sous les formulaires de commentaire à l’attention de vos utilisateurs. Cette fonctionnalité est désactivée par défaut, cependant, vous pouvez l’activer au-dessus."
+msgstr "Pour aider votre site à être plus transparent à l’égard des lois sur la confidentialité comme la RGPD, Akismet permet d’afficher une notification sous les formulaires de commentaire à l’attention de vos utilisateurs et utilisatrices. Cette fonctionnalité est désactivée par défaut, cependant, vous pouvez l’activer au-dessus."
 
 #: views/config.php:160
 msgid "Do not display privacy notice."
@@ -100,7 +100,7 @@ msgstr "Ce site utilise Akismet pour réduire les indésirables. <a href=\"%s\" 
 
 #: class.akismet-admin.php:87
 msgid "We collect information about visitors who comment on Sites that use our Akismet anti-spam service. The information we collect depends on how the User sets up Akismet for the Site, but typically includes the commenter's IP address, user agent, referrer, and Site URL (along with other information directly provided by the commenter such as their name, username, email address, and the comment itself)."
-msgstr "Nous récoltons des informations sur les visiteurs qui commentent sur les sites utilisant Akismet, notre service contre les indésirables. Ces informations récoltées dépendent des réglages Akismet effectués par l’utilisateur sur le site, et incluent généralement l’adresse IP des commentateurs, l’agent utilisateur, le référent et l’URL du site (ainsi que d’autres informations fournies directement par le commentateur comme leur nom, identifiant, adresse e-mail et leur commentaire)."
+msgstr "Nous récoltons des informations sur les visiteurs qui laissent des commentaires sur les sites utilisant Akismet, notre service contre les indésirables. Les informations récoltées dépendent des réglages Akismet sur le site, et incluent généralement l’adresse IP des commentateurs, l’agent utilisateur, le référent et l’URL du site (ainsi que d’autres informations fournies directement par le commentateur comme son nom, identifiant, adresse e-mail et son commentaire)."
 
 #: class.akismet.php:236
 msgid "Comment discarded."
@@ -150,11 +150,11 @@ msgstr "Configuration manuelle"
 
 #: class.akismet-admin.php:234
 msgid "On this page, you are able to update your Akismet settings and view spam stats."
-msgstr "Sur cette page, vous êtes en mesure de mettre à jour vos réglages Akismet et de voir vos statistiques de spam."
+msgstr "Sur cette page, vous êtes en mesure de mettre à jour vos réglages Akismet et de voir vos statistiques d’indésirables."
 
 #. Description of the plugin
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key."
-msgstr "Utilisé par des millions d’utilisateurs, Akismet est probablement la meilleure solution au monde pour <strong>protéger votre blog des indésirables</strong>. Il garde votre site protégé même quand vous dormez. Pour commencer : activez l’extension Akismet et allez ensuite dans la page de réglages pour configurer votre clé API."
+msgstr "Utilisé par des millions de personnes, Akismet est probablement la meilleure solution au monde pour <strong>protéger votre blog des indésirables</strong>. Il garde votre site protégé même quand vous dormez. Pour commencer : activez l’extension Akismet et allez ensuite dans la page de réglages pour configurer votre clé API."
 
 #. Plugin Name of the plugin
 #: class.akismet-admin.php:112 class.akismet-admin.php:115
@@ -181,7 +181,7 @@ msgstr "Utilisez votre connexion Jetpack pour activer Akismet."
 
 #: views/title.php:2
 msgid "Eliminate spam from your site"
-msgstr "Éliminez le spam de votre site"
+msgstr "Éliminez les indésirables de votre site"
 
 #: views/notice.php:107
 msgid "Would you like to <a href=\"%s\">check pending comments</a>?"
@@ -414,7 +414,7 @@ msgstr "Contacter le support Akismet"
 
 #: views/connect-jp.php:45
 msgid "No worries! Get in touch and we&#8217;ll sort this out."
-msgstr "Aucune crainte à avoir ! Contactez-nous et nous trouverons une solution."
+msgstr "Aucune crainte à avoir ! Contactez-nous et nous trouverons une solution."
 
 #. translators: %s is the WordPress.com email address
 #: views/connect-jp.php:44
@@ -712,7 +712,7 @@ msgstr[1] "Il y a actuellement <a href=\"%2$s\">%1$s commentaires</a> dans votre
 
 #: class.akismet-admin.php:363
 msgid "<a href=\"%s\">Akismet</a> blocks spam from getting to your blog. "
-msgstr "<a href=\"%s\">Akismet</a> a bloqué les commentaires indésirables de votre site. "
+msgstr "<a href=\"%s\">Akismet</a> a bloqué les commentaires indésirables de votre site."
 
 #: class.akismet-admin.php:357
 msgid "<a href=\"%1$s\">Akismet</a> has protected your site from %2$s spam comment already. "

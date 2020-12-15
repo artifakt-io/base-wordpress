@@ -11,62 +11,58 @@ msgstr ""
 "Language: fr\n"
 "Project-Id-Version: Themes - Twenty Sixteen\n"
 
+#. Theme Name of the theme
+#: inc/block-patterns.php:16 inc/block-patterns.php:56
+msgid "Twenty Sixteen"
+msgstr "Twenty Sixteen"
+
 #. Description of the theme
 msgid "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere."
 msgstr "Twenty Sixteen revisite en la modernisant une mise en page WordPress toujours aussi populaire&nbsp;: l&rsquo;entête horizontal avec une barre latérale facultative, qui fonctionne tout aussi bien pour les blogs que pour les sites. Il dispose d'options de couleurs avec de superbes jeux de couleurs par défaut, une composition en grille fluide et harmonieuse utilisant l'approche \"mobile-first\", et un soin apporté jusque dans les moindres détails. Twenty Sixteen vous donnera un site WordPress magnifique dans toutes les situations."
 
-#. Theme Name of the theme
-msgid "Twenty Sixteen"
-msgstr "Twenty Sixteen"
-
-#: functions.php:204
-msgid "Bright Red"
-msgstr "Rouge brillant"
-
-#: functions.php:199
+#: functions.php:200
 msgid "Dark Red"
 msgstr "Rouge foncé"
 
-#: functions.php:194
+#: functions.php:195
 msgid "Medium Brown"
 msgstr "Marron moyen"
 
-#: functions.php:189
+#: functions.php:190
 msgid "Dark Brown"
 msgstr "Marron foncé"
 
-#: functions.php:184
+#: functions.php:185
 msgid "Light Blue"
 msgstr "Bleu clair"
 
-#: functions.php:179
+#: functions.php:205
+msgid "Bright Red"
+msgstr "Rouge brillant"
+
+#: functions.php:180
 msgid "Bright Blue"
 msgstr "Bleu brillant"
 
-#: functions.php:174
+#: functions.php:175
 msgid "Blue Gray"
 msgstr "Bleu gris"
 
-#: functions.php:169
+#: functions.php:170
 msgid "White"
 msgstr "Blanc"
 
-#: functions.php:164
+#: functions.php:165
 msgid "Light Gray"
 msgstr "Gris clair"
 
-#: functions.php:159
+#: functions.php:160
 msgid "Medium Gray"
 msgstr "Gris moyen"
 
-#: functions.php:154
+#: functions.php:155
 msgid "Dark Gray"
 msgstr "Gris foncé"
-
-#. translators: %s: Post title.
-#: template-parts/content.php:29 inc/template-tags.php:195
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Continuer la lecture<span class=\"screen-reader-text\"> de &laquo;&nbsp;%s&nbsp;&raquo;</span>"
 
 #. translators: %s: Post title.
 #: image.php:88 template-parts/content-page.php:39
@@ -74,6 +70,11 @@ msgstr "Continuer la lecture<span class=\"screen-reader-text\"> de &laquo;&nbsp;
 #: template-parts/content-search.php:43 template-parts/content-single.php:47
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Modifier<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#. translators: %s: Post title.
+#: template-parts/content.php:29 inc/template-tags.php:195
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continuer la lecture<span class=\"screen-reader-text\"> de &laquo;&nbsp;%s&nbsp;&raquo;</span>"
 
 #: inc/customizer.php:347
 msgid "Red"
@@ -100,15 +101,15 @@ msgctxt "label"
 msgid "Search for:"
 msgstr "Recherche pour :"
 
-#: footer.php:30
-msgid "Footer Social Links Menu"
-msgstr "Menu de liens sociaux de pied"
-
 #: footer.php:17
 msgid "Footer Primary Menu"
 msgstr "Menu principal de pied"
 
-#: functions.php:269
+#: footer.php:30
+msgid "Footer Social Links Menu"
+msgstr "Menu de liens sociaux de pied"
+
+#: functions.php:273
 msgid "Add widgets here to appear in your sidebar."
 msgstr "Ajoutez des widgets ici pour les faire apparaître dans votre barre latérale."
 
@@ -146,13 +147,13 @@ msgstr "Auteur&nbsp;:"
 msgid "Previous post:"
 msgstr "Article précédent&nbsp;:"
 
-#: single.php:41
-msgid "Previous"
-msgstr "Précédent"
-
 #: single.php:39
 msgid "Next post:"
 msgstr "Article suivant&nbsp;:"
+
+#: single.php:41
+msgid "Previous"
+msgstr "Précédent"
 
 #: single.php:38
 msgid "Next"
@@ -183,22 +184,22 @@ msgctxt "Used before publish date."
 msgid "Posted on"
 msgstr "Publié le"
 
-#. translators: %s: Post title.
-#: inc/template-tags.php:53
-msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
-
 #: inc/template-tags.php:40
 msgctxt "Used before post format."
 msgid "Format"
 msgstr "Format"
+
+#. translators: %s: Post title.
+#: inc/template-tags.php:53
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
 
 #: inc/template-tags.php:26
 msgctxt "Used before post author name."
 msgid "Author"
 msgstr "Auteur"
 
-#: functions.php:209 inc/customizer.php:357
+#: functions.php:210 inc/customizer.php:357
 msgid "Yellow"
 msgstr "Jaune"
 
@@ -210,13 +211,13 @@ msgstr "Gris"
 msgid "Dark"
 msgstr "Foncé"
 
-#: inc/customizer.php:317
-msgid "Default"
-msgstr "Par défaut"
-
 #: inc/customizer.php:242
 msgid "Secondary Text Color"
 msgstr "Seconde couleur du texte"
+
+#: inc/customizer.php:317
+msgid "Default"
+msgstr "Par défaut"
 
 #: inc/customizer.php:221
 msgid "Main Text Color"
@@ -230,6 +231,11 @@ msgstr "Couleur des liens"
 msgid "Page Background Color"
 msgstr "Couleur du fond de page"
 
+#: single.php:31 image.php:107
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
+msgstr "<span class=\"meta-nav\">Publié dans</span><span class=\"post-title\">%title</span>"
+
 #: inc/customizer.php:153
 msgid "Base Color Scheme"
 msgstr "Jeu de couleurs de base"
@@ -238,11 +244,6 @@ msgstr "Jeu de couleurs de base"
 #: inc/back-compat.php:42 inc/back-compat.php:56 inc/back-compat.php:75
 msgid "Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again."
 msgstr "Twenty Sixteen ne fonctionne qu'à partir de WordPress 4.4. Vous utilisez la version %s. Veuillez mettre à jour et réessayer. "
-
-#: single.php:31 image.php:107
-msgctxt "Parent post link"
-msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
-msgstr "<span class=\"meta-nav\">Publié dans</span><span class=\"post-title\">%title</span>"
 
 #: image.php:77
 msgctxt "Used before full size attachment link."
@@ -270,42 +271,42 @@ msgstr "Menu"
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: functions.php:420
-msgid "collapse child menu"
-msgstr "fermer le sous-menu"
-
-#: functions.php:419
+#: functions.php:423
 msgid "expand child menu"
 msgstr "ouvrir le sous-menu"
 
-#: functions.php:338
-msgctxt "Inconsolata font: on or off"
-msgid "on"
-msgstr "on"
+#: functions.php:424
+msgid "collapse child menu"
+msgstr "fermer le sous-menu"
 
-#: functions.php:330
-msgctxt "Montserrat font: on or off"
-msgid "on"
-msgstr "on"
-
-#: functions.php:322
+#: functions.php:326
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr "on"
 
-#: functions.php:291
-msgid "Content Bottom 2"
-msgstr "Contenu inférieur 2"
+#: functions.php:334
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "on"
 
-#: functions.php:281 functions.php:293
+#: functions.php:342
+msgctxt "Inconsolata font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:285 functions.php:297
 msgid "Appears at the bottom of the content on posts and pages."
 msgstr "S’affiche en bas du contenu des articles et des pages."
 
-#: functions.php:279
+#: functions.php:283
 msgid "Content Bottom 1"
 msgstr "Contenu inférieur 1"
 
-#: functions.php:267
+#: functions.php:295
+msgid "Content Bottom 2"
+msgstr "Contenu inférieur 2"
+
+#: functions.php:271
 msgid "Sidebar"
 msgstr "Barre latérale"
 
@@ -356,13 +357,13 @@ msgstr "Apparemment, rien n&rsquo;a été trouvé à cette adresse. Essayez avec
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oups&nbsp;! Cette page est introuvable."
 
-#. Author of the theme
-msgid "the WordPress team"
-msgstr "l'équipe WordPress"
-
 #. Theme URI of the theme
 msgid "https://wordpress.org/themes/twentysixteen/"
 msgstr "https://wordpress.org/themes/twentysixteen/"
+
+#. Author of the theme
+msgid "the WordPress team"
+msgstr "l'équipe WordPress"
 
 #. Author URI of the theme
 #: footer.php:60
