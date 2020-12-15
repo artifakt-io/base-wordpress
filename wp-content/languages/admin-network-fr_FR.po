@@ -1,15 +1,15 @@
-# Translation of WordPress - 5.3.x - Administration - Network Admin in French (France)
-# This file is distributed under the same license as the WordPress - 5.3.x - Administration - Network Admin package.
+# Translation of WordPress - 5.4.x - Administration - Network Admin in French (France)
+# This file is distributed under the same license as the WordPress - 5.4.x - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-12-04 14:39:13+0000\n"
+"PO-Revision-Date: 2020-06-09 16:27:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: fr\n"
-"Project-Id-Version: WordPress - 5.3.x - Administration - Network Admin\n"
+"Project-Id-Version: WordPress - 5.4.x - Administration - Network Admin\n"
 
 #: wp-admin/network/sites.php:333
 msgid "Site marked as spam."
@@ -171,7 +171,7 @@ msgstr "Voici la liste de tous les sites de ce réseau. Vous pouvez changer de v
 
 #: wp-admin/network/sites.php:30
 msgid "Add New takes you to the Add New Site screen. You can search for a site by Name, ID number, or IP address. Screen Options allows you to choose how many sites to display on one page."
-msgstr "Ajouter vous envoie au formulaire en bas de cette page. Vous pouvez chercher un site par le nom, l’identifiant ou l’adresse IP. Les options d’écran vous permettent de choisir le nombre de sites à afficher sur une même page."
+msgstr "Ajouter vous envoie au formulaire en bas de cette page. Vous pouvez rechercher un site par le nom, l’identifiant ou l’adresse IP. Les options d’écran vous permettent de choisir le nombre de sites à afficher sur une même page."
 
 #: wp-admin/network/menu.php:80
 msgid "Installed Themes"
@@ -286,7 +286,7 @@ msgstr "Première page"
 
 #: wp-admin/network/settings.php:308
 msgid "The first post on a new site."
-msgstr "Le premier article sur tout nouveau site."
+msgstr "Le premier article sur un nouveau site."
 
 #: wp-admin/network/settings.php:298
 msgid "The welcome email sent to new users."
@@ -656,11 +656,6 @@ msgstr[1] "%s thèmes activés."
 msgid "Theme enabled."
 msgstr "Thème activé."
 
-#: wp-admin/network/themes.php:272 wp-admin/network/menu.php:81
-msgctxt "theme"
-msgid "Add New"
-msgstr "Ajouter"
-
 #: wp-admin/network/themes.php:253
 msgid "Themes list navigation"
 msgstr "Parcours de la liste des thèmes"
@@ -789,15 +784,15 @@ msgstr "Tâches rapides"
 
 #: wp-admin/network/index.php:43
 msgid "To search for a site, <strong>enter the path or domain</strong>."
-msgstr "Pour chercher un site, <strong>saisissez son chemin ou son domaine</strong>."
+msgstr "Pour rechercher un site, <strong>saisissez son chemin ou son domaine</strong>."
 
 #: wp-admin/network/index.php:42
 msgid "To search for a user, <strong>enter an email address or username</strong>. Use a wildcard to search for a partial username, such as user&#42;."
-msgstr "Pour chercher un utilisateur, <strong>saisissez une adresse de messagerie ou un identifiant</strong>. Utilisez le signe étoile (*) pour lancer une recherche sur un identifiant partiel, par exemple utilisa&#42;."
+msgstr "Pour rechercher un utilisateur, <strong>saisissez une adresse e-mail ou un identifiant</strong>. Utilisez le signe étoile (*) pour lancer une recherche sur un identifiant partiel, par exemple utilisa&#42;."
 
 #: wp-admin/network/index.php:41
 msgid "To search for a user or site, use the search boxes."
-msgstr "Pour chercher un utilisateur ou un site, utilisez les champs de recherche."
+msgstr "Pour rechercher un utilisateur ou un site, utilisez les champs de recherche."
 
 #: wp-admin/network/index.php:40
 msgid "To add a new site, <strong>click Create a New Site</strong>."
@@ -1028,12 +1023,12 @@ msgstr "Vous ne semblez pas avoir de thème disponible en ce moment."
 msgid "No themes found."
 msgstr "Aucun thème trouvé."
 
-#: wp-admin/includes/class-wp-ms-sites-list-table.php:704
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:705
 msgctxt "verb; site"
 msgid "Archive"
 msgstr "Archiver"
 
-#: wp-admin/includes/class-wp-ms-sites-list-table.php:702
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:703
 msgid "Unarchive"
 msgstr "Désarchiver"
 
@@ -1062,7 +1057,7 @@ msgid "Last Updated"
 msgstr "Dernière mise à jour"
 
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:294
-#: wp-admin/includes/class-wp-ms-sites-list-table.php:708
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:709
 msgctxt "site"
 msgid "Not Spam"
 msgstr "N’est pas un indésirable"
@@ -1106,7 +1101,7 @@ msgstr[1] "Archivés <span class=\"count\">(%s)</span>"
 msgid "Public <span class=\"count\">(%s)</span>"
 msgid_plural "Public <span class=\"count\">(%s)</span>"
 msgstr[0] "Public <span class=\"count\">(%s)</span>"
-msgstr[1] "Publics <span class=\"count\">(%1$s)</span>"
+msgstr[1] "Publics <span class=\"count\">(%s)</span>"
 
 #. translators: %s: Number of sites.
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:223
@@ -1131,7 +1126,7 @@ msgid "Deleted"
 msgstr "Supprimé"
 
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:40
-#: wp-admin/includes/class-wp-ms-sites-list-table.php:710
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:711
 #: wp-admin/network/site-info.php:186
 msgctxt "site"
 msgid "Spam"
@@ -1259,7 +1254,7 @@ msgstr "L’adresse internet de votre réseau sera %s."
 
 #. translators: 1: Site URL, 2: Host name, 3: www.
 #: wp-admin/includes/network.php:271
-msgid "We recommend you change your siteurl to %1$s before enabling the network feature. It will still be possible to visit your site using the %3$s prefix with an address like %2$s but any links will not have the %3$s prefix."
+msgid "We recommend you change your site domain to %1$s before enabling the network feature. It will still be possible to visit your site using the %3$s prefix with an address like %2$s but any links will not have the %3$s prefix."
 msgstr "Nous vous recommandons de modifier votre adresse de site pour %1$s avant d’activer la fonctionnalité réseau. Il sera toujours possible de parcourir votre site en mettant le préfixe %3$s à une adresse telle que %2$s, mais tous les liens n’auront pas le préfixe %3$s."
 
 #: wp-admin/includes/network.php:266 wp-admin/includes/network.php:280
@@ -1342,8 +1337,8 @@ msgid "%s Sites"
 msgstr "Les sites de %s"
 
 #: wp-admin/includes/network.php:157
-msgid "ERROR: The network could not be created."
-msgstr "ERREUR : Le réseau ne peut pas être créé."
+msgid "Error: The network could not be created."
+msgstr "Erreur : Le réseau ne peut pas être créé."
 
 #: wp-admin/includes/network.php:145
 msgid "Return to Dashboard"

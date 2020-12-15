@@ -1,3 +1,4 @@
+/*! This file is auto-generated */
 /*------------------------------------------------------------------------------
   14.0 - Media Screen
 ------------------------------------------------------------------------------*/
@@ -1055,7 +1056,11 @@ border color while dragging a file over the uploader drop area */
 
 .imgedit-help {
 	display: none;
-	font-style: italic;
+	padding-bottom: 8px;
+}
+
+.imgedit-help.imgedit-restore {
+	padding-bottom: 0;
 }
 
 /* higher specificity than buttons */
