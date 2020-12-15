@@ -179,7 +179,7 @@ if ( $action ) {
 			check_admin_referer( 'bulk-users' );
 			$userids = $_REQUEST['users'];
 			/** This action is documented in wp-admin/network/site-themes.php */
-			$referer = apply_filters( 'handle_network_bulk_actions-' . get_current_screen()->id, $referer, $action, $userids, $id );
+			$referer = apply_filters( 'handle_network_bulk_actions-' . get_current_screen()->id, $referer, $action, $userids, $id ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 			$update  = $action;
 			break;
 	}
@@ -197,7 +197,7 @@ if ( isset( $_GET['action'] ) && 'update-site' == $_GET['action'] ) {
 
 add_screen_option( 'per_page' );
 
-/* translators: %s: site name */
+/* translators: %s: Site title. */
 $title = sprintf( __( 'Edit Site: %s' ), esc_html( $details->blogname ) );
 
 $parent_file  = 'sites.php';
@@ -217,7 +217,7 @@ if ( ! wp_is_large_network( 'users' ) && apply_filters( 'show_network_site_users
 require( ABSPATH . 'wp-admin/admin-header.php' ); ?>
 
 <script type="text/javascript">
-var current_site_id = <?php echo $id; ?>;
+var current_site_id = <?php echo absint( $id ); ?>;
 </script>
 
 
