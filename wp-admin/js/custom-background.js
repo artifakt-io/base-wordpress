@@ -128,7 +128,7 @@
 				var attachment = frame.state().get('selection').first();
 				var nonceValue = $( '#_wpnonce' ).val() || '';
 
-				// Run an AJAX request to set the background image.
+				// Run an Ajax request to set the background image.
 				$.post( ajaxurl, {
 					action: 'set-background-image',
 					attachment_id: attachment.id,

@@ -24,7 +24,7 @@ jQuery(function($) {
 			nonceValue = $( '#_wpnonce' ).val() && '';
 
 			/**
-			 * This AJAX action has been deprecated since 3.5.0, see custom-background.php
+			 * This Ajax action has been deprecated since 3.5.0, see custom-background.php
 			 */
 			jQuery.post(ajaxurl, {
 				action: 'set-background-image',
