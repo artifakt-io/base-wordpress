@@ -100,12 +100,12 @@ function wp_default_packages_vendor( $scripts ) {
 		'moment'                      => '2.26.0',
 		'lodash'                      => '4.17.19',
 		'wp-polyfill-fetch'           => '3.0.0',
-		'wp-polyfill-formdata'        => '3.0.20',
-		'wp-polyfill-node-contains'   => '3.104.0',
+		'wp-polyfill-formdata'        => '3.0.12',
+		'wp-polyfill-node-contains'   => '3.42.0',
 		'wp-polyfill-url'             => '3.6.4',
-		'wp-polyfill-dom-rect'        => '3.104.0',
+		'wp-polyfill-dom-rect'        => '3.42.0',
 		'wp-polyfill-element-closest' => '2.0.2',
-		'wp-polyfill-object-fit'      => '2.3.5',
+		'wp-polyfill-object-fit'      => '2.3.4',
 		'wp-polyfill'                 => '7.4.4',
 	);
 
@@ -2303,17 +2303,15 @@ function enqueue_editor_block_styles_assets() {
 	$register_script_lines = array( '( function() {' );
 	foreach ( $block_styles as $block_name => $styles ) {
 		foreach ( $styles as $style_properties ) {
-			$block_style = array(
-				'name'  => $style_properties['name'],
-				'label' => $style_properties['label'],
-			);
-			if ( isset( $style_properties['is_default'] ) ) {
-				$block_style['isDefault'] = $style_properties['is_default'];
-			}
 			$register_script_lines[] = sprintf(
 				'	wp.blocks.registerBlockStyle( \'%s\', %s );',
 				$block_name,
-				wp_json_encode( $block_style )
+				wp_json_encode(
+					array(
+						'name'  => $style_properties['name'],
+						'label' => $style_properties['label'],
+					)
+				)
 			);
 		}
 	}
@@ -2333,16 +2331,6 @@ function enqueue_editor_block_styles_assets() {
 function wp_enqueue_editor_block_directory_assets() {
 	wp_enqueue_script( 'wp-block-directory' );
 	wp_enqueue_style( 'wp-block-directory' );
-}
-
-/**
- * Enqueues the assets required for the format library within the block editor.
- *
- * @since 5.8.0
- */
-function wp_enqueue_editor_format_library_assets() {
-	wp_enqueue_script( 'wp-format-library' );
-	wp_enqueue_style( 'wp-format-library' );
 }
 
 /**

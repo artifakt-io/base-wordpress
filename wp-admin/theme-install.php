@@ -84,16 +84,8 @@ if ( $tab ) {
 	 * Fires before each of the tabs are rendered on the Install Themes page.
 	 *
 	 * The dynamic portion of the hook name, `$tab`, refers to the current
-	 * theme installation tab.
-	 *
-	 * Possible hook names include:
-	 *
-	 *  - `install_themes_pre_dashboard`
-	 *  - `install_themes_pre_featured`
-	 *  - `install_themes_pre_new`
-	 *  - `install_themes_pre_search`
-	 *  - `install_themes_pre_updated`
-	 *  - `install_themes_pre_upload`
+	 * theme installation tab. Possible values are 'dashboard', 'search', 'upload',
+	 * 'featured', 'new', or 'updated'.
 	 *
 	 * @since 2.8.0
 	 */
@@ -259,16 +251,8 @@ if ( $tab ) {
 	 * Fires at the top of each of the tabs on the Install Themes page.
 	 *
 	 * The dynamic portion of the hook name, `$tab`, refers to the current
-	 * theme installation tab.
-	 *
-	 * Possible hook names include:
-	 *
-	 *  - `install_themes_dashboard`
-	 *  - `install_themes_featured`
-	 *  - `install_themes_new`
-	 *  - `install_themes_search`
-	 *  - `install_themes_updated`
-	 *  - `install_themes_upload`
+	 * theme installation tab. Possible values are 'dashboard', 'search', 'upload',
+	 * 'featured', 'new', or 'updated'.
 	 *
 	 * @since 2.8.0
 	 *

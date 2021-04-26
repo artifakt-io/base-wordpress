@@ -3534,7 +3534,7 @@ function wp_enqueue_editor() {
  *     @type array    $codemirror Additional CodeMirror setting overrides.
  *     @type array    $csslint    CSSLint rule overrides.
  *     @type array    $jshint     JSHint rule overrides.
- *     @type array    $htmlhint   HTMLHint rule overrides.
+ *     @type array    $htmlhint   JSHint rule overrides.
  * }
  * @return array|false Settings for the enqueued code editor, or false if the editor was not enqueued.
  */
@@ -3625,7 +3625,7 @@ function wp_enqueue_code_editor( $args ) {
  *     @type array    $codemirror Additional CodeMirror setting overrides.
  *     @type array    $csslint    CSSLint rule overrides.
  *     @type array    $jshint     JSHint rule overrides.
- *     @type array    $htmlhint   HTMLHint rule overrides.
+ *     @type array    $htmlhint   JSHint rule overrides.
  * }
  * @return array|false Settings for the code editor.
  */
@@ -3962,7 +3962,7 @@ function wp_get_code_editor_settings( $args ) {
 	 *     @type array    $codemirror Additional CodeMirror setting overrides.
 	 *     @type array    $csslint    CSSLint rule overrides.
 	 *     @type array    $jshint     JSHint rule overrides.
-	 *     @type array    $htmlhint   HTMLHint rule overrides.
+	 *     @type array    $htmlhint   JSHint rule overrides.
 	 * }
 	 */
 	return apply_filters( 'wp_code_editor_settings', $settings, $args );
@@ -4718,16 +4718,6 @@ function get_the_generator( $type = '' ) {
 	 * Filters the HTML for the retrieved generator type.
 	 *
 	 * The dynamic portion of the hook name, `$type`, refers to the generator type.
-	 *
-	 * Possible hook names include:
-	 *
-	 *  - `get_the_generator_atom`
-	 *  - `get_the_generator_comment`
-	 *  - `get_the_generator_export`
-	 *  - `get_the_generator_html`
-	 *  - `get_the_generator_rdf`
-	 *  - `get_the_generator_rss2`
-	 *  - `get_the_generator_xhtml`
 	 *
 	 * @since 2.5.0
 	 *

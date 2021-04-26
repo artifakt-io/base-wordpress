@@ -119,14 +119,8 @@ if ( $_REQUEST['short'] ) {
 	/**
 	 * Filters the returned ID of an uploaded attachment.
 	 *
-	 * The dynamic portion of the hook name, `$type`, refers to the attachment type.
-	 *
-	 * Possible hook names include:
-	 *
-	 *  - `async_upload_audio`
-	 *  - `async_upload_file`
-	 *  - `async_upload_image`
-	 *  - `async_upload_video`
+	 * The dynamic portion of the hook name, `$type`, refers to the attachment type,
+	 * such as 'image', 'audio', 'video', 'file', etc.
 	 *
 	 * @since 2.5.0
 	 *

@@ -2061,7 +2061,7 @@ themes.RunInstaller = {
 };
 
 // Ready...
-$( function() {
+$( document ).ready(function() {
 	if ( themes.isInstall ) {
 		themes.RunInstaller.init();
 	} else {
@@ -2089,7 +2089,7 @@ $( function() {
 })( jQuery );
 
 // Align theme browser thickbox.
-jQuery( function($) {
+jQuery(document).ready( function($) {
 	window.tb_position = function() {
 		var tbWindow = $('#TB_window'),
 			width = $(window).width(),

@@ -4533,7 +4533,7 @@ Modal = wp.media.View.extend(/** @lends wp.media.view.Modal.prototype */{
 		}
 
 		// Pause current audio/video even after closing the modal.
-		$( '.mejs-pause button' ).trigger( 'click' );
+		$( '.mejs-pause button' ).click();
 
 		// Enable page scrolling.
 		$( 'body' ).removeClass( 'modal-open' );
@@ -4555,7 +4555,7 @@ Modal = wp.media.View.extend(/** @lends wp.media.view.Modal.prototype */{
 			// Fallback to the admin page main element.
 			$( '#wpbody-content' )
 				.attr( 'tabindex', '-1' )
-				.trigger( 'focus' );
+				.focus();
 		}
 
 		this.propagate('close');
@@ -5475,7 +5475,7 @@ UploaderInline = View.extend(/** @lends wp.media.view.UploaderInline.prototype *
 			this.controller.$uploaderToggler
 				.attr( 'aria-expanded', 'false' )
 				// Move focus back to the toggle button when closing the uploader.
-				.trigger( 'focus' );
+				.focus();
 		}
 	}
 
@@ -9566,8 +9566,7 @@ EmbedUrl = View.extend(/** @lends wp.media.view.EmbedUrl.prototype */{
 	},
 
 	url: function( event ) {
-		var url = event.target.value || '';
-		this.model.set( 'url', url.trim() );
+		this.model.set( 'url', $.trim( event.target.value ) );
 	}
 });
 

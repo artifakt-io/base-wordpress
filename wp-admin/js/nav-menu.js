@@ -1331,7 +1331,7 @@
 
 	};
 
-	$( function() {
+	$(document).ready(function() {
 
 		wpNavMenu.init();
 

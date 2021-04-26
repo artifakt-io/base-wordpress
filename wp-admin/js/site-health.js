@@ -6,7 +6,7 @@
 
 /* global ajaxurl, ClipboardJS, SiteHealth, wp */
 
-jQuery( function( $ ) {
+jQuery( document ).ready( function( $ ) {
 
 	var __ = wp.i18n.__,
 		_n = wp.i18n._n,
