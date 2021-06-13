@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: base-wordpress:5-apache
+    ports:
+      - "8000:80"
+
+  mysql:
+    image: mysql/mysql-server:8.0.22
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-changeme}
+      MYSQL_USER: ${DB_USER:-changeme}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-s3cr3t!}
+      MYSQL_RANDOM_ROOT_PASSWORD: "true"
