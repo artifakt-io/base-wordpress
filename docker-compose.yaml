@@ -1,17 +1,30 @@
 version: '3'
 
+volumes:
+  data:
+  mysql-data:
+
 services:
   app:
     build: .
     image: base-wordpress:5-apache
     ports:
       - "8000:80"
+    volumes:
+      - "data:/data"
+    depends_on:
+        - mysql
 
   mysql:
-    image: mysql/mysql-server:8.0.22
-    command: --default-authentication-plugin=mysql_native_password
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    volumes:
+      - mysql-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: ${DB_NAME:-changeme}
       MYSQL_USER: ${DB_USER:-changeme}
       MYSQL_PASSWORD: ${DB_PASSWORD:-s3cr3t!}
       MYSQL_RANDOM_ROOT_PASSWORD: "true"
+    ports:
+        - "3306:3306"
