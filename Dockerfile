@@ -13,8 +13,4 @@ RUN --mount=source=artifakt-custom-build-args,target=/tmp/build-args \
     if [ -f /tmp/build-args ]; then source /tmp/build-args; fi && \
     if [ -f /.artifakt/build.sh ]; then /.artifakt/build.sh; fi
 
-ARG COMPOSER_VERSION=1.10.22
-RUN curl -sS https://getcomposer.org/installer | \
-    php -- --version=${COMPOSER_VERSION} --install-dir=/usr/local/bin --filename=composer
-
 RUN [ -f composer.lock ] && composer install --no-cache --optimize-autoloader --no-interaction --no-ansi --no-dev || true
