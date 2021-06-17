@@ -37,7 +37,7 @@ Container configuration tries to stick to 12-factor app principles as much as po
 docker run -d -p 8000:80 --env-file=.env registry.artifakt.io/wordpress:5.7-apache
 ```
 
-##Pre configurated Docker compose stack
+## Pre configurated Docker compose stack
 
 You can use this stack to run a complete LAMP stack with MySQL in a few docker-compose lines.
 
