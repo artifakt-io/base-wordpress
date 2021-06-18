@@ -31,13 +31,7 @@ Docker-compose is also required. See [official instructions](https://docs.docker
 
 Container configuration tries to stick to 12-factor app principles as much as possible. Thus, you can edit a custom `.env` file containing Artifakt default env. variables.
 
-## Run a basic container
-
-```
-docker run -d -p 8000:80 --env-file=.env registry.artifakt.io/wordpress:5.7-apache
-```
-
-## Pre configurated Docker compose stack
+## Start local Artifakt stack
 
 You can use this stack to run a complete LAMP stack with MySQL in a few docker-compose lines.
 
@@ -57,7 +51,7 @@ We also have a development mode, with the included docker-compose file that will
 
 ## Persistent data
 
-To persist data between container updates, we inittialize a /data/ folder inside the docker image. You can use it for images, assets, uploads, cache, etc.
+To persist data between container updates, we initialize a /data/ folder inside the docker image. You can use it for images, assets, uploads, cache, etc.
 
 ## Building Workflow
 
@@ -77,7 +71,7 @@ End of build step!
 Here is what happens when the container runs on your workstation. We apply the same workflow in production for predictible results.
 
 1. environment variables for all dependencies are gathered: mysql, redis, elasticache, etc.
-2. container is created with standard volumes on /data and /var/log/artifakt.
+2. container is created with standard volumes on /data.
 3. container is configured with standard env. variables
 4. container is started and runs the base image entrypoint
 5. base image entrypoint will look for a custom entrypoint script in /.artifakt folder and run it for you.
@@ -86,7 +80,7 @@ Here is what happens when the container runs on your workstation. We apply the s
 # Support and feedback
 
 * [File an issue](https://github.com/artifakt-io/artifakt-docker-images/issues/new/choose)
-* [Contact Artifakt Support](https://support.artifakt.io/)
+* [Artifakt Help Center](https://help.artifakt.com/)
 
 [Build Status - Main]: https://github.com/artifakt-io/artifakt-docker-images/actions/workflows/nightly.yml/badge.svg?branch=main&event=push
 [Build status]: https://github.com/artifakt-io/artifakt-docker-images/actions
