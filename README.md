@@ -31,19 +31,41 @@ Docker-compose is also required. See [official instructions](https://docs.docker
 
 Container configuration tries to stick to 12-factor app principles as much as possible. Thus, you can edit a custom `.env` file containing Artifakt default env. variables.
 
-## Run a basic container
-
-```
-docker run -d -p 8000:80 --env-file=.env registry.artifakt.io/wordpress:5.7-apache
-```
-
 ## Pre configurated Docker compose stack
 
 You can use this stack to run a complete LAMP stack with MySQL in a few docker-compose lines.
 
 ```
-docker-compose --env-file=.env up -d --build
+docker-compose up -d --build
 ```
+
+and then open [https://localhost:8443](https://localhost:8443)
+
+## Trust self-signed certificates
+
+We automated a self-sign certificate with nginx-proxy to keep closer to production, using [docker-self-signed-proxy-companion](https://github.com/sebastienheyd/docker-self-signed-proxy-companion) tool.
+
+There is a last step to avoid seeing the alert "your connection is not private".
+
+At the first launch of the proxy-companion container, a CA certificate is generated. You will find `ca.crt` in the `certs` folder, this is the CA certificate.
+
+There are several ways to import a CA certificate, depending on your browser.
+
+##### Chrome
+
+Go to : `chrome://settings/certificates`
+
+Go to `Trusted Root Certification Authorities` and import `ca.crt`
+
+##### Firefox
+
+Go to `about:config#privacy`
+
+On the bottom of the page, click on `View certificates`, select `Authorities` > `Import` then browse to `ca.crt`.
+
+Check `Trust the CA to identify websites`
+
+NB: if you have more projects from Artifakt, no need to import another CA, you can copy an existing "certs" folder and recycle it in another project. Just make sure to do it before starting containers. Some delay at startup can be expected too.
 
 ## Adding custom code
 

@@ -1,24 +1,38 @@
 version: '3'
 
-volumes:
-  data:
-  mysql-data:
-
 services:
+
+  proxy:
+    image: jwilder/nginx-proxy
+    container_name: base-wordpress-proxy
+    restart: always
+    ports:
+        - "8000:80"
+        - "8443:443"
+    volumes:
+        - /var/run/docker.sock:/tmp/docker.sock:ro
+        - ./certs:/etc/nginx/certs
+
+  proxy-companion:
+    image: registry.artifakt.io/self-signed-proxy-companion
+    restart: always
+    environment: 
+      - "NGINX_PROXY_CONTAINER=base-wordpress-proxy"
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+        - ./certs:/etc/nginx/certs
+
   app:
     build: .
     image: base-wordpress:5-apache
-    ports:
-      - "8000:80"
     volumes:
       - "data:/data"
-    depends_on:
-        - mysql
-
+    environment:
+      VIRTUAL_HOST: "localhost"
+      SELF_SIGNED_HOST: "localhost"
+  
   mysql:
-    image: mysql:8.0
-    platform: linux/amd64
-    container_name: mysql
+    image: mysql/mysql-server:8.0
     restart: always
     volumes:
       - mysql-data:/var/lib/mysql
@@ -29,3 +43,8 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: "true"
     ports:
         - "3306:3306"
+
+volumes:
+  data:
+  mysql-data:
+        
