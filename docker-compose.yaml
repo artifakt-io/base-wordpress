@@ -25,7 +25,10 @@ services:
   app:
     build: .
     image: base-wordpress:5-apache
+    env_file:
+      - ./.env
     volumes:
+#      - ".:/var/www/html" # Uncomment to develop locally
       - "data:/data"
     environment:
       VIRTUAL_HOST: "localhost"
@@ -37,9 +40,9 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     environment:
-      MYSQL_DATABASE: ${DB_NAME:-changeme}
-      MYSQL_USER: ${DB_USER:-changeme}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-s3cr3t!}
+      MYSQL_DATABASE: ${ARTIFAKT_MYSQL_DATABASE_NAME:-changeme}
+      MYSQL_USER: ${ARTIFAKT_MYSQL_USER:-changeme}
+      MYSQL_PASSWORD: ${ARTIFAKT_MYSQL_PASSWORD:-s3cr3t!}
       MYSQL_RANDOM_ROOT_PASSWORD: "true"
     ports:
         - "3306:3306"
