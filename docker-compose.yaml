@@ -30,6 +30,7 @@ services:
     volumes:
 #      - ".:/var/www/html" # Uncomment to develop locally
       - "data:/data"
+    restart: always
     environment:
       VIRTUAL_HOST: "localhost"
       SELF_SIGNED_HOST: "localhost"
