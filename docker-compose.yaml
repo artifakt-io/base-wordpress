@@ -30,6 +30,7 @@ services:
     volumes:
 #      - ".:/var/www/html" # Uncomment to develop locally
       - "data:/data"
+    restart: always
     environment:
       VIRTUAL_HOST: "localhost"
       SELF_SIGNED_HOST: "localhost"
@@ -38,6 +39,7 @@ services:
     image: mysql/mysql-server:8.0
     restart: always
     volumes:
+      - ./.artifakt/etc/mysqld.cnf:/etc/mysql/conf.d/mysqld.cnf:ro
       - mysql-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: ${ARTIFAKT_MYSQL_DATABASE_NAME:-changeme}
