@@ -1,4 +1,4 @@
-FROM registry.artifakt.io/wordpress:6-apache
+FROM registry.artifakt.io/wordpress:6-apache-php8.1
 
 ARG CODE_ROOT=.
 
