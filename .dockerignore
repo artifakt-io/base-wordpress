@@ -3,3 +3,8 @@
 .dockerignore
 Dockerfile
 docker-compose.yaml
+.history
+.DS_Store
+certs
+.env
+composer

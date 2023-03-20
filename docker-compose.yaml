@@ -1,40 +1,39 @@
-version: '3'
+version: "3"
 
 services:
-
   proxy:
     image: jwilder/nginx-proxy
     container_name: base-wordpress-proxy
     restart: always
     ports:
-        - "8000:80"
-        - "8443:443"
+      - "8000:80"
+      - "8443:443"
     volumes:
-        - /var/run/docker.sock:/tmp/docker.sock:ro
-        - ./certs:/etc/nginx/certs
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
 
   proxy-companion:
     image: registry.artifakt.io/nginx-proxy-companion:latest
     restart: always
-    environment: 
+    environment:
       - "NGINX_PROXY_CONTAINER=base-wordpress-proxy"
     volumes:
-        - /var/run/docker.sock:/var/run/docker.sock:ro
-        - ./certs:/etc/nginx/certs
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./certs:/etc/nginx/certs
 
   app:
     build: .
-    image: base-wordpress:5-apache
     env_file:
       - ./.env
     volumes:
-#      - ".:/var/www/html" # Uncomment to develop locally
+      ### Pour la ligne suivante veuillez renseigner le chemin complet depuis votre poste de travail
+      - "/Users/brunopinchede/www/Customers/flyprovence-2/themes:/var/www/html/wp-content/themes"
       - "data:/data"
     restart: always
     environment:
       VIRTUAL_HOST: "localhost"
       SELF_SIGNED_HOST: "localhost"
-  
+
   mysql:
     image: mysql/mysql-server:8.0
     restart: always
@@ -47,9 +46,8 @@ services:
       MYSQL_PASSWORD: ${ARTIFAKT_MYSQL_PASSWORD:-s3cr3t!}
       MYSQL_RANDOM_ROOT_PASSWORD: "true"
     ports:
-        - "3306:3306"
+      - "3306:3306"
 
 volumes:
   data:
   mysql-data:
-        

@@ -7,26 +7,25 @@ set -e
   curl https://api.wordpress.org/secret-key/1.1/salt >> /data/secret-key.php && \
   chown www-data:www-data /data/secret-key.php
 
-# Mount upload directory
-rm -rf /var/www/html/wp-content/uploads && \
-  mkdir -p /data/wp-content/uploads && \
-  ln -sfn /data/wp-content/uploads /var/www/html/wp-content/uploads && \
-  chown -h www-data:www-data /var/www/html/wp-content/uploads /data/wp-content/uploads
+### Cette règle ne s'applique que si la base est vide (premier build) 
+### ou que vous avez complètement vider docker (conteneur mysql et volulme mysql en particulier)
+if [ "$ARTIFAKT_IS_MAIN_INSTANCE" == 1 ]; then
+  #### Configure wordpress in case of first install or no db found
+  echo "### Check if the database is already installed"
+    tableCount=$(mysql -h "$ARTIFAKT_MYSQL_HOST" -u "$ARTIFAKT_MYSQL_USER" -p"$ARTIFAKT_MYSQL_PASSWORD" "$ARTIFAKT_MYSQL_DATABASE_NAME" -B -N -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = '$ARTIFAKT_MYSQL_DATABASE_NAME';" | grep -v "count");
+  echo "### Number of tables: $tableCount"
 
-# Mount cache directory
-rm -rf /var/www/html/wp-content/cache && \
-  mkdir -p /data/wp-content/cache && \
-  ln -sfn /data/wp-content/cache /var/www/html/wp-content/cache && \
-  chown -h www-data:www-data /var/www/html/wp-content/cache /data/wp-content/cache
-  
-# Uncomment to mount plugins directory if you don't version them
-#rm -rf /var/www/html/wp-content/plugins && \
-#  mkdir -p /data/wp-content/plugins && \
-#  ln -sfn /data/wp-content/plugins /var/www/html/wp-content/plugins && \
-#  chown -h www-data:www-data /var/www/html/wp-content/plugins /data/wp-content/plugins
+	if [ "$tableCount" -eq 0 ]; then
+    if [ -z "$SITE_NAME" ];then SITE_NAME="Artifakt"; fi
+    if [ -z "$ADMIN_NAME" ];then ADMIN_NAME="admin"; fi
+    if [ -z "$ADMIN_PASSWORD" ];then ADMIN_PASSWORD="admin"; fi
+    if [ -z "$ADMIN_MAIL" ];then ADMIN_MAIL="engineering@artifakt.io"; fi
+    if [ -n "$HOST_WORDPRESS" ]; then
+        su www-data -s /bin/bash -c "wp core install --url=$HOST_WORDPRESS --title=$SITE_NAME --admin_user=$ADMIN_NAME --admin_password=$ADMIN_PASSWORD --admin_email=$ADMIN_MAIL"
+	  fi
+  fi
+fi
 
-# Uncomment to mount themes directory if you don't version them
-#rm -rf /var/www/html/wp-content/themes && \
-#  mkdir -p /data/wp-content/themes && \
-#  ln -sfn /data/wp-content/themes /var/www/html/wp-content/themes && \
-#  chown www-data:www-data /var/www/html/wp-content/themes /data/wp-content/themes
+
+
+
