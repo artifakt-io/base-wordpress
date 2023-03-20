@@ -1,3 +1,8 @@
 #!/bin/bash
 set -e
-## Add below your custom scripts to customize your build
+
+#### Install more services than regular ones
+apt-get update; \
+apt-get install -y --no-install-recommends \
+  vim \
+  && rm -rf /var/lib/apt/lists/*

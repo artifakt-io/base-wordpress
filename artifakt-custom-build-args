@@ -1,5 +1,12 @@
-
 # as any script, use this file to export any env. vars
 # needed in local docker image build
 # when you use the Artifakt PaaS console, 
 # they are automatically generated for you 
+export WORDPRESS_VERSION="latest"
+export ARTIFAKT_MYSQL_DATABASE_NAME=wordpress
+export ARTIFAKT_MYSQL_USER=wordpress
+export ARTIFAKT_MYSQL_PASSWORD=wordpress
+export ARTIFAKT_MYSQL_HOST=mysql
+export ARTIFAKT_IS_MAIN_INSTANCE="1"
+export WP_DEBUG=false
+export TABLE_PREFIX=""

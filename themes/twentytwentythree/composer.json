@@ -1,0 +1,19 @@
+{
+  "name": "twenty/twenty-three",
+  "description": "Theme de test",
+  "type": "wordpress-theme",
+  "version": "1.0",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "authors": [
+    {
+      "name": "Bruno Pinchedé",
+      "email": "bruno.pinchede@artifakt.io"
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.3.0"
+  }
+}
